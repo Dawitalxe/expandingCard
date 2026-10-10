@@ -1,0 +1,88 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body{
+    margin : 0;
+    padding: 0;
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    width : 90vw;
+}
+.panel{
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-size: cover;
+    color: white;
+    cursor: pointer;
+    position : relative;
+    flex: .5;
+    height: 80vh;
+    margin: 10px;
+    border-radius: 50px;
+    transition: flex  .5s ease-in-out;
+}
+.panel h3{
+    font-family: sans-serif 'Times New Roman', Times, serif;
+    position: absolute;
+    bottom: 20px;
+    left : 20px;
+    text-shadow: black 2px 4px 4px;
+    margin : 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out 0.4s;
+}
+ .panel strong{
+    font-family: sans-serif 'Times New Roman', Times, serif;
+    position: absolute;
+    bottom: 70px;
+    left : 30px;
+    text-shadow: black 2px 4px 4px;
+    margin : 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out 0.4s;
+}
+.panel p{
+    font-family: sans-serif 'Times New Roman', Times, serif;
+    position: absolute;
+    bottom: 50px;
+    left : 30px;
+    text-shadow: black 2px 4px 4px;
+    margin : 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out 0.4s;
+}
+.panel.active{
+    flex : 5;
+}
+.panel.active  h3,.panel.active p, .panel.active strong {
+    opacity: 1;
+}
+
+
+
+@media(max-width: 750px){
+    body{
+        overflow-x: hidden;
+        
+        display: block;
+    }
+    .container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+      .panel strong{
+        margin: 20px;
+    }
+
+   .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    } 
+} 
+
